@@ -1,0 +1,47 @@
+.location {
+  width: 90%;
+  margin: auto;
+}
+
+.location h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
+
+.location section {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, auto);
+  gap: 20px;
+}
+
+.location section > div {
+  width: 100%;
+  border: 1px solid var(--text-color);
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.location section > div h3 {
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--title-color);
+}
+
+.location section > div ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 0;
+}
+
+.location section > div ul li {
+  color: var(--text-color);
+}

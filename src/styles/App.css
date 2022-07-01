@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --body-color: #232222;
+  --title-color: #742839;
+  --text-color: #c1324f;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Carrois Gothic SC", sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+}
+
+main {
+  margin-top: 12vh;
+}
