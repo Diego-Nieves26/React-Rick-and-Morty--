@@ -1,4 +1,10 @@
-import { Header, Character, Location, Modal } from "./components";
+import {
+  Header,
+  Character,
+  Location,
+  Modal,
+  ModalLocation,
+} from "./components";
 import { useSelector } from "react-redux";
 import "./styles/App.css";
 
@@ -7,6 +13,7 @@ function App() {
   return (
     <>
       <Modal />
+      <ModalLocation />
       <Header />
       <main>{typeData === "character" ? <Character /> : <Location />}</main>
     </>
