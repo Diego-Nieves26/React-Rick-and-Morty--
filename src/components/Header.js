@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsLocation } from "../store/slices/typeData.slice";
 import { setModal } from "../store/slices/modal.slice";
+import { setModalLocation } from "../store/slices/modalLocation.slice";
 import "../styles/Header.css";
 import axios from "axios";
 
@@ -35,9 +36,15 @@ const Header = () => {
 
   const selectedSearch = (id) => {
     setOpenMenu(false);
-    axios
-      .get(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((res) => dispatch(setModal(res.data)));
+    if (typeData === "character") {
+      axios
+        .get(`https://rickandmortyapi.com/api/character/${id}`)
+        .then((res) => dispatch(setModal(res.data)));
+    } else {
+      axios
+        .get(`https://rickandmortyapi.com/api/location/${id}`)
+        .then((res) => dispatch(setModalLocation(res.data)));
+    }
   };
 
   return (

@@ -93,4 +93,5 @@ nav > div section h6 {
   color: var(--text-color);
   border: 1px solid var(--text-color);
   border-top: none;
+  cursor: pointer;
 }

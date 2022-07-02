@@ -77,7 +77,7 @@ const ModalLocation = () => {
               </div>
               <ul className="modal-data-img-residents">
                 {data.residents?.map((resident) => (
-                  <CardResident link={resident} />
+                  <CardResident link={resident} key={resident} />
                 ))}
               </ul>
             </motion.div>
