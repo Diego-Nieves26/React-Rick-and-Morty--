@@ -80,3 +80,28 @@
   width: 100%;
   margin-top: 100px;
 }
+
+@media (min-width: 700px) {
+  .modal-info-location ul {
+    display: flex;
+    gap: 30px;
+  }
+  .modal-data-img-residents {
+    max-height: 700px;
+    grid-template-columns: repeat(4, auto);
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .modal-info-location ul {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0 0 20px;
+  }
+  .modal-data-img-residents {
+    max-height: 430px;
+    grid-template-columns: repeat(8, auto);
+    margin-top: 50px;
+  }
+}
