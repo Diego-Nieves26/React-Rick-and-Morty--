@@ -12,6 +12,16 @@ header {
   color: var(--title-color);
 }
 
+nav {
+  max-width: 900px;
+  margin: auto;
+}
+
+header > div {
+  text-align: center;
+  width: 100%;
+}
+
 .btnOpenMenu {
   background: none;
   position: absolute;
@@ -33,6 +43,17 @@ nav > div {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  transition: all 0.5s;
+}
+
+.open-menu {
+  opacity: 1;
+  left: 0;
+}
+
+.close-menu {
+  opacity: 0;
+  left: -100%;
 }
 
 nav > div select {
@@ -44,6 +65,11 @@ nav > div select {
   outline: none;
   border-radius: 10px;
   color: var(--title-color);
+  cursor: pointer;
+}
+
+nav > div > div {
+  width: 100%;
 }
 
 nav > div form {
@@ -94,4 +120,64 @@ nav > div section h6 {
   border: 1px solid var(--text-color);
   border-top: none;
   cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .btnOpenMenu {
+    left: 6vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    height: 20vh;
+    flex-direction: column;
+  }
+  .btnOpenMenu {
+    display: none;
+  }
+  nav {
+    width: 100%;
+  }
+  .close-menu {
+    opacity: 1;
+    left: 0;
+  }
+  nav > div {
+    width: 100%;
+    height: 10vh;
+    position: static;
+    background: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+  nav > div select {
+    width: 250px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  nav > div form {
+    width: 250px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+  }
+
+  nav > div > div {
+    width: auto;
+    position: relative;
+  }
+  nav > div section {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 40px;
+    width: 80%;
+    border-radius: 0 0 10px 10px;
+  }
+  nav > div section h6 {
+    width: 90%;
+    margin: 5px 10px;
+  }
 }

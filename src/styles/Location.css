@@ -46,3 +46,21 @@
 .location section > div ul li {
   color: var(--text-color);
 }
+
+@media (min-width: 700px) {
+  .location section {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 1000px) {
+  .location {
+    max-width: 1000px;
+  }
+  .location section {
+    grid-template-columns: repeat(3, auto);
+  }
+  .location section > div {
+    width: 290px;
+  }
+}

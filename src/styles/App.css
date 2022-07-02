@@ -27,3 +27,9 @@ body {
 main {
   margin-top: 12vh;
 }
+
+@media (min-width: 1000px) {
+  main {
+    margin-top: 20vh;
+  }
+}

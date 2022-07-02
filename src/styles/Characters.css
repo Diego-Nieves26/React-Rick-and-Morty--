@@ -30,3 +30,18 @@
   height: 150px;
   border-radius: 10px;
 }
+
+@media (min-width: 700px) {
+  .character ul {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 1000px) {
+  .character ul {
+    grid-template-columns: repeat(5, auto);
+  }
+  .character {
+    max-width: 900px;
+  }
+}

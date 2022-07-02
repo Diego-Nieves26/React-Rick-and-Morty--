@@ -76,9 +76,20 @@ const ModalLocation = () => {
                 </ul>
               </div>
               <ul className="modal-data-img-residents">
-                {data.residents?.map((resident) => (
-                  <CardResident link={resident} key={resident} />
-                ))}
+                {data.residents.length === 0 ? (
+                  <>
+                    <img
+                      src="http://assets.stickpng.com/images/58f37726a4fa116215a92410.png"
+                      alt="Rick"
+                      className="location-empty"
+                    />
+                    <h4>Esta ubicacion no tiene residentes</h4>
+                  </>
+                ) : (
+                  data.residents?.map((resident) => (
+                    <CardResident link={resident} key={resident} />
+                  ))
+                )}
               </ul>
             </motion.div>
           </motion.div>
