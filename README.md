@@ -1,6 +1,6 @@
 ## Decripcion
 
-Cree un sitio donde el usuario pueda ver información sobre las ubicaciones de los universo de “Rick and Morty”.
+Cree un sitio donde el usuario pueda ver información sobre las ubicaciones de los universos y personajes de “Rick and Morty”.
 
 Utilizando la API de [The Rick and Morty API](https://rickandmortyapi.com/) para obtener la información nesesaria. Creando asi una app web que muestra los diferentes personajes y universos, con su respectiva informacion
 
