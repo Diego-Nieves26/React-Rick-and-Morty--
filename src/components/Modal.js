@@ -1,8 +1,8 @@
-import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { setModal } from "../store/slices/modal.slice";
-import { motion, AnimatePresence } from "framer-motion";
 import "../styles/Modal.css";
+import React from "react";
 
 const Modal = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Modal = () => {
             exit={{
               opacity: 0,
             }}
-            className="modal-backdrop"
+            className="modalBackdrop"
           />
           <motion.div
             initial={{
@@ -39,7 +39,7 @@ const Modal = () => {
             exit={{
               scale: 0,
             }}
-            className="modal-content-wrapper"
+            className="modalBackdrop__content"
           >
             <motion.div
               initial={{
@@ -58,7 +58,7 @@ const Modal = () => {
                 x: 100,
                 opacity: 0,
               }}
-              className="modal-content"
+              className="modal__content"
             >
               <button className="btn" onClick={() => dispatch(setModal(null))}>
                 <i className="bx bx-x"></i>

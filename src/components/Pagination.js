@@ -18,9 +18,13 @@ const Pagination = ({ totalCards, getNewData }) => {
   }
 
   return (
-    <div className="change-page">
+    <div className="pagination">
       {pageNumbers.map((number) => (
-        <button className="btn" onClick={() => changePage(number)} key={number}>
+        <button
+          className="btn pagination__button"
+          onClick={() => changePage(number)}
+          key={number}
+        >
           {number}
         </button>
       ))}

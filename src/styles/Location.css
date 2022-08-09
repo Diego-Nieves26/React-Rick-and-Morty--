@@ -3,13 +3,13 @@
   margin: auto;
 }
 
-.location h2 {
+.location__h2 {
   margin: 20px 0;
   font-size: 1.5rem;
   color: var(--title-color);
 }
 
-.location section {
+.locationList {
   width: 100%;
   display: grid;
   justify-content: center;
@@ -18,7 +18,7 @@
   gap: 20px;
 }
 
-.location section > div {
+.locationList__div {
   width: 100%;
   border: 1px solid var(--text-color);
   padding: 10px;
@@ -30,13 +30,13 @@
   cursor: pointer;
 }
 
-.location section > div h3 {
+.locationList__div__h3 {
   padding: 0 0 10px;
   border-bottom: 1px solid var(--text-color);
   color: var(--title-color);
 }
 
-.location section > div ul {
+.locationList__div__ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +48,7 @@
 }
 
 @media (min-width: 700px) {
-  .location section {
+  .locationList {
     grid-template-columns: repeat(2, auto);
   }
 }
@@ -57,10 +57,12 @@
   .location {
     max-width: 1000px;
   }
-  .location section {
+
+  .locationList {
     grid-template-columns: repeat(3, auto);
   }
-  .location section > div {
+
+  .locationList__div {
     width: 290px;
   }
 }

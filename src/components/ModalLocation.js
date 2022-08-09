@@ -8,6 +8,7 @@ import CardResident from "./CardResident";
 const ModalLocation = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.modalLocation);
+
   return (
     <AnimatePresence>
       {data !== null && (

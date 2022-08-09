@@ -10,6 +10,7 @@ import "./styles/App.css";
 
 function App() {
   const typeData = useSelector((state) => state.typeData);
+
   return (
     <>
       <Modal />

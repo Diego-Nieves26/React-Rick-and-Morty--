@@ -1,19 +1,19 @@
+import { setModalLocation } from "../store/slices/modalLocation.slice";
+import { setIsLocation } from "../store/slices/typeData.slice";
+import { useDispatch, useSelector } from "react-redux";
+import { setModal } from "../store/slices/modal.slice";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
-import { setIsLocation } from "../store/slices/typeData.slice";
-import { setModal } from "../store/slices/modal.slice";
-import { setModalLocation } from "../store/slices/modalLocation.slice";
 import "../styles/Header.css";
 import axios from "axios";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const [openMenu, setOpenMenu] = useState(false);
+  const [suggestionSearch, setSuggestionSearch] = useState([]);
   const typeData = useSelector((state) => state.typeData);
   const [inputSearch, setInputSearch] = useState("");
+  const [openMenu, setOpenMenu] = useState(false);
   const [searchId, setSearchId] = useState(1);
-  const [suggestionSearch, setSuggestionSearch] = useState([]);
+  const dispatch = useDispatch();
 
   const search = (e) => {
     setInputSearch(e.target.value);
@@ -53,35 +53,39 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div>
+    <header className="header">
+      <div className="header__div">
         <h1>Rick and Morty</h1>
       </div>
-      <nav>
+      <nav className="nav">
         <button
-          className="btn btnOpenMenu"
+          className="btn nav__button--menu"
           onClick={() => setOpenMenu(!openMenu)}
         >
           <i className={`bx ${openMenu ? "bx-x" : "bx-menu"}`}></i>
         </button>
-        <div className={openMenu ? "open-menu" : "close-menu"}>
-          <select onChange={(e) => dispatch(setIsLocation(e.target.value))}>
+        <div className={`nav__div ${openMenu ? "open-menu" : "close-menu"}`}>
+          <select
+            className="nav__div__select"
+            onChange={(e) => dispatch(setIsLocation(e.target.value))}
+          >
             <option value="character">Personajes</option>
             <option value="location">Ubicaciones</option>
           </select>
-          <div>
-            <form onSubmit={searchById}>
+          <div className="nav__div__div">
+            <form className="navForm" onSubmit={searchById}>
               <input
                 type="text"
                 placeholder="Buscar"
                 onChange={(e) => search(e)}
                 value={inputSearch}
+                className="navForm__input"
               />
-              <button className="btn btnSearch">
+              <button className="btn navForm__button">
                 <i className="bx bx-search bx-tada"></i>
               </button>
             </form>
-            <section>
+            <section className="nav__div__div--section">
               {suggestionSearch?.map((suggestion) => (
                 <motion.h6
                   initial={{ opacity: 0, y: 20 }}

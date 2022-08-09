@@ -1,4 +1,4 @@
-header {
+.header {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -10,19 +10,20 @@ header {
   border-radius: 0 0 10px 10px;
   background-color: var(--body-color);
   color: var(--title-color);
+  z-index: 1000;
 }
 
-nav {
+.nav {
   max-width: 900px;
   margin: auto;
 }
 
-header > div {
+.header__div {
   text-align: center;
   width: 100%;
 }
 
-.btnOpenMenu {
+.nav__button--menu {
   background: none;
   position: absolute;
   bottom: 2vh;
@@ -30,7 +31,7 @@ header > div {
   color: var(--title-color);
 }
 
-nav > div {
+.nav__div {
   width: 100%;
   height: 90vh;
   position: absolute;
@@ -56,7 +57,7 @@ nav > div {
   left: -100%;
 }
 
-nav > div select {
+.nav__div__select {
   width: 100%;
   background-color: var(--body-color);
   border: none;
@@ -68,18 +69,18 @@ nav > div select {
   cursor: pointer;
 }
 
-nav > div > div {
+.nav__div__div {
   width: 100%;
 }
 
-nav > div form {
+.navForm {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-nav > div form input {
+.navForm__input {
   width: 85%;
   height: 40px;
   border-radius: 10px 0 0 10px;
@@ -90,7 +91,7 @@ nav > div form input {
   color: aliceblue;
 }
 
-.btnSearch {
+.navForm__button {
   width: 15%;
   height: 40px;
   display: flex;
@@ -101,7 +102,7 @@ nav > div form input {
   border-radius: 0 10px 10px 0;
 }
 
-nav > div section {
+.nav__div__div--section {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -123,27 +124,31 @@ nav > div section h6 {
 }
 
 @media (min-width: 700px) {
-  .btnOpenMenu {
+  .nav__button--menu {
     left: 6vw;
   }
 }
 
 @media (min-width: 1000px) {
-  header {
+  .header {
     height: 20vh;
     flex-direction: column;
   }
-  .btnOpenMenu {
+
+  .nav__button--menu {
     display: none;
   }
-  nav {
+
+  .nav {
     width: 100%;
   }
+
   .close-menu {
     opacity: 1;
     left: 0;
   }
-  nav > div {
+
+  .nav__div {
     width: 100%;
     height: 10vh;
     position: static;
@@ -155,21 +160,24 @@ nav > div section h6 {
     flex-direction: row;
     gap: 20px;
   }
-  nav > div select {
+
+  .nav__div__select {
     width: 250px;
     box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  nav > div form {
+
+  .navForm {
     width: 250px;
     box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
   }
 
-  nav > div > div {
+  .nav__div__div {
     width: auto;
     position: relative;
   }
-  nav > div section {
+
+  .nav__div__div--section {
     background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 40px;
