@@ -18,6 +18,7 @@ Utilizando la API de [The Rick and Morty API](https://rickandmortyapi.com/) para
 - Css
 - Framer-Motion
 - Redux-toolkit
+- React-loading-skeleton
 
 ## Autor
 ** Diego Nieves **
