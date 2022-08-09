@@ -11,6 +11,14 @@ Utilizando la API de [The Rick and Morty API](https://rickandmortyapi.com/) para
 - Correcto funcionamiento del buscador (buscador por nombre).
 - Listado de informacion de residentes y ubicaciones paginados.
 
+## Utilice
+
+- React
+- Axios
+- Css
+- Framer-Motion
+- Redux-toolkit
+
 ## Autor
 ** Diego Nieves **
 * [LinkedIn](https://www.linkedin.com/in/diego-nieves-04b409242/)
