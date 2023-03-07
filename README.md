@@ -20,6 +20,7 @@ Utilizando la API de [The Rick and Morty API](https://rickandmortyapi.com/) para
 
 - React
 - Axios
+- Html
 - Css
 - Framer-Motion
 - Redux-toolkit
